@@ -11,7 +11,6 @@ body {
   background: #f5f5f5;
   color: #333;
   line-height: 1.6;
-  /* Adjusts page down so it isn't hidden beneath the fixed header */
   padding-top: 70px; 
 }
 
@@ -30,6 +29,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition via JavaScript scroll */
 }
 
 /* NAVBAR */
@@ -131,13 +131,7 @@ body {
   background: #fff;
 }
 
-.btn-outline {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-/* SECTION */
+/* SECTION GLOBAL TITLE */
 .section {
   padding: 100px 0;
 }
@@ -152,7 +146,7 @@ body {
   color: #003366;
 }
 
-/* ABOUT */
+/* ABOUT SECTION */
 .about-content {
   display: flex;
   gap: 40px;
@@ -184,20 +178,14 @@ body {
   margin-bottom: 20px;
 }
 
-/* CARDS */
-.level-cards,
-.why-content,
-.event-cards,
-.testimonial-cards {
+/* ACADEMIC LEVELS CARDS */
+.level-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
 
-.card,
-.why-box,
-.event-card,
-.testimonial {
+.card {
   background: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -210,8 +198,7 @@ body {
   transform: translateY(-10px);
 }
 
-.card i,
-.why-box i {
+.card i {
   font-size: 50px;
   color: gold;
   margin-bottom: 20px;
@@ -229,10 +216,10 @@ body {
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
-  transition: 0.5s;
+  transition: 0.3s ease; 
 }
 
-/* FORM FIXED AND OPTIMIZED */
+/* FORM STYLING */
 .admission-form {
   display: flex;
   flex-direction: column;
@@ -257,27 +244,29 @@ body {
   font-size: 15px;
 }
 
-/* FIXED: Changed padding from 150px to standard 12px */
 .admission-form input,
-.admission-form select {
+.admission-form select,
+.admission-form textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
   font-size: 16px;
   width: 100%;
+  font-family: inherit;
+  transition: border-color 0.3s;
 }
 
-/* FIXED: Corrected syntax and missing class dot */
 .admission-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  outline: none;
-  font-size: 16px;
   height: 120px;
   resize: vertical;
-  width: 100%;
+}
+
+/* ENHANCEMENT: Input fields glow softly when users tap into them */
+.admission-form input:focus,
+.admission-form select:focus,
+.admission-form textarea:focus {
+  border-color: #003366;
 }
 
 /* CONTACT */
@@ -297,15 +286,15 @@ body {
   font-size: 18px;
 }
 
-.map {
-  flex: 1;
-  min-width: 300px;
+/* Email text decorations custom alignment */
+.contact-email-link {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.map iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
+.contact-email-link:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -316,32 +305,15 @@ body {
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.footer-links ul {
-  list-style: none;
-}
-
-.footer-links ul li {
-  margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.social-icons {
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.social-icons a {
-  color: #fff;
-  font-size: 22px;
+.footer-logo h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 
 .footer-bottom {
@@ -349,9 +321,10 @@ body {
   margin-top: 40px;
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 20px;
+  font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE RESPONSIVENESS */
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 20px;
@@ -391,4 +364,3 @@ body {
     flex-direction: column;
   }
 }
-

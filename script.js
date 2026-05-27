@@ -86,7 +86,8 @@ if (admissionForm) {
     };
 
     // Fix: Make sure it ends exactly at 'admissions' with no generic tags!
-    const CLOUD_API_URL = "https://6a15251e91ff9a63de078780.mockapi.io/admissions";
+    
+const CLOUD_API_URL = "https://6a15251e91ff9a63de078780.mockapi.io/admissions";
 
     fetch(CLOUD_API_URL, {
       method: "POST",

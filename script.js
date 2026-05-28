@@ -89,7 +89,8 @@ if (admissionForm) {
     
 const CLOUD_API_URL = "https://6a15251e91ff9a63de078780.mockapi.io/admissions";
 
-    fetch(CLOUD_API_URL, {
+    fetch(CLOUD_API_  "https://6a15251e91ff9a63de078780.mockapi.io/admissions";
+, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

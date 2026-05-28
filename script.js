@@ -65,6 +65,8 @@ galleryImages.forEach(image => {
   });
 });
 
+
+// 6. ADMISSION FORM SUBMISSION
 const admissionForm = document.querySelector(".admission-form");
 
 if (admissionForm) {
@@ -85,12 +87,10 @@ if (admissionForm) {
       submission_date: new Date().toLocaleString()
     };
 
-    // Fix: Make sure it ends exactly at 'admissions' with no generic tags!
-    
-const CLOUD_API_URL = "https://6a15251e91ff9a63de078780.mockapi.io/admissions";
+    const CLOUD_API_URL = "https://6a15251e91ff9a63de078780.mockapi.io/admissions";
 
-    fetch(CLOUD_API_  "https://6a15251e91ff9a63de078780.mockapi.io/admissions";
-, {
+    // FIX: Passed the correct CLOUD_API_URL variable into the fetch function
+    fetch(CLOUD_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

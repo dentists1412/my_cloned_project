@@ -87,7 +87,7 @@ if (admissionForm) {
       submission_date: new Date().toLocaleString()
     };
 
-    const CLOUD_API_URL = "https://6a15251e91ff9a63de078780.mockapi.io/admissions";
+    const CLOUD_API_URL = "https://6a1a05a9489e4715751aae32.mockapi.io/admissions/students";
 
     // FIX: Passed the correct CLOUD_API_URL variable into the fetch function
     fetch(CLOUD_API_URL, {
